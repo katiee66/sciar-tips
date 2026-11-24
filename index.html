@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sciar Tips | Clearer card-tip payouts for restaurants</title>
+<style>
+:root{--ink:#18352f;--muted:#61766f;--green:#176b55;--green-dark:#104b3c;--mint:#eaf5ef;--line:#dce9e2;--paper:#f7faf8;--white:#fff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:inherit}
+.wrap{width:min(1100px,calc(100% - 36px));margin:auto}
+header{padding:22px 0;background:#fff;border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font-size:19px;font-weight:850;letter-spacing:-.04em;color:var(--green-dark)}
+.logo span{color:#79a991}
+.navlink{font-size:14px;text-decoration:none;color:var(--muted);font-weight:650}
+.hero{padding:70px 0 64px;background:radial-gradient(circle at 82% 25%,#d9eee3 0,transparent 30%),linear-gradient(135deg,#f0f8f3,#f8fbf9)}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:44px}
+.kicker{display:inline-block;padding:6px 12px;border-radius:999px;background:#dff0e6;color:var(--green-dark);font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+h1{font-size:clamp(38px,6vw,62px);line-height:1.06;letter-spacing:-.055em;margin:18px 0;color:#173a31}
+.lead{font-size:18px;max-width:570px;color:#536c63;margin:0 0 25px}
+.actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;padding:13px 19px;border-radius:12px;font-weight:750}
+.btn-primary{background:var(--green);color:white;box-shadow:0 8px 20px #176b552b}
+.btn-secondary{background:#fff;border:1px solid var(--line);color:var(--green-dark)}
+.visual{background:#fff;border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:0 20px 50px #234c3c12}
+.visual-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+.smallcap{font-size:12px;color:var(--muted);font-weight:750;letter-spacing:.07em;text-transform:uppercase}
+.dot{width:10px;height:10px;background:#67b58b;border-radius:50%;display:inline-block;margin-right:6px}
+.pool{background:var(--mint);border-radius:17px;padding:18px;margin-bottom:12px}
+.pool strong{display:block;font-size:31px;letter-spacing:-.04em;color:var(--green-dark)}
+.pool span{font-size:13px;color:var(--muted)}
+.minirow{display:flex;justify-content:space-between;padding:12px 2px;border-bottom:1px solid #edf2ef;font-size:14px}
+.minirow:last-child{border-bottom:0}
+.demo-link{width:100%;margin-top:14px}
+.visual-note{font-size:12px;line-height:1.45;color:var(--muted);margin:10px 2px 0}
+.section{padding:56px 0}
+.section h2{font-size:clamp(26px,4vw,36px);letter-spacing:-.035em;margin:0 0 10px}
+.section-intro{color:var(--muted);max-width:650px;margin:0 0 25px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.feature{background:#fff;border:1px solid var(--line);border-radius:18px;padding:21px}
+.feature-icon{width:38px;height:38px;border-radius:12px;background:var(--mint);display:grid;place-items:center;color:var(--green);font-size:19px;margin-bottom:13px}
+.feature h3{font-size:17px;margin:0 0 6px}
+.feature p{font-size:14px;color:var(--muted);margin:0}
+.how{background:#edf6f1;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step{padding:18px;background:#fff;border-radius:16px;border:1px solid var(--line)}
+.num{font-size:12px;font-weight:850;color:var(--green);letter-spacing:.08em}
+.step h3{margin:7px 0 4px;font-size:17px}
+.step p{margin:0;color:var(--muted);font-size:14px}
+.cta{padding:55px 0}
+.cta-panel{background:var(--green-dark);color:#fff;border-radius:24px;padding:34px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.cta-panel h2{font-size:clamp(25px,4vw,34px);line-height:1.15;margin:0 0 7px}
+.cta-panel p{margin:0;color:#d3e8dd}
+.cta-panel .btn{background:#fff;color:var(--green-dark);white-space:nowrap}
+footer{padding:22px 0 30px;color:var(--muted);font-size:12px;border-top:1px solid var(--line)}
+.source{margin-top:10px}
+@media(max-width:760px){.hero{padding:48px 0}.hero-grid{grid-template-columns:1fr;gap:28px}.features,.steps{grid-template-columns:1fr}.cta-panel{align-items:flex-start;flex-direction:column}.visual{max-width:520px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+ <a class="logo" href="index.html" aria-label="Sciar Tips home">sciar<span>·</span>tips</a>
+ <a class="navlink" href="app.html">Staff view ↗</a>
+</div></header>
+
+<main>
+<section class="hero"><div class="wrap hero-grid">
+ <div>
+  <span class="kicker">For restaurant owners</span>
+  <h1>Card tips, shared with clarity.</h1>
+  <p class="lead">A simple way for restaurants to organise card-tip payouts — with a clear personal payout view for each team member.</p>
+  <div class="actions">
+   <a class="btn btn-primary" href="mailto:hello@sciar.example?subject=Sciar%20Tips%20sign-up">Ask about signing up</a>
+   <a class="btn btn-secondary" href="app.html">View the staff demo</a>
+  </div>
+ </div>
+ <div class="visual" aria-label="Example of the information a staff member can check">
+  <div class="visual-top"><strong>What staff can check</strong><span class="smallcap"><i class="dot"></i>Example view</span></div>
+  <div class="pool"><span>Your tip payout</span><strong>Your own amount</strong><span>Each team member sees their own payout information.</span></div>
+  <div class="minirow"><span>Weekly hours</span><strong>Your hours</strong></div>
+  <div class="minirow"><span>Tip calculation</span><strong>How it was worked out</strong></div>
+  <div class="minirow"><span>Other staff members</span><strong>Not their personal figures</strong></div>
+  <a class="btn btn-secondary demo-link" href="app.html">Open the staff demo ↗</a>
+  <p class="visual-note">This is a demonstration, not a live account or payment service.</p>
+ </div>
+</div></section>
+
+<section class="section"><div class="wrap">
+ <h2>Who is Sciar Tips for?</h2>
+ <p class="section-intro">For restaurant owners who want a clear, consistent way to manage card-tip payouts, and for team members who want to understand their own payout.</p>
+ <div class="features">
+  <article class="feature"><div class="feature-icon">⌁</div><h3>Bring card tips together</h3><p>Sciar Tips connects to a restaurant's card terminal and brings the card tips into a weekly pool.</p></article>
+  <article class="feature"><div class="feature-icon">⚙</div><h3>Set the split rule</h3><p>The restaurant owner sets the tip-splitting rule in the owner dashboard.</p></article>
+  <article class="feature"><div class="feature-icon">◎</div><h3>Make personal payouts clear</h3><p>Each staff member can view their own payout details in the staff view. They also receive a text with their own payout each Monday.</p></article>
+ </div>
+ <p class="muted source">Product information is based on the supplied pilot-pack README.md ("The company") and the staff-view alpha built for this assignment.</p>
+ <div class="features" style="margin-top:22px">
+  <article class="feature"><h3>For restaurant owners</h3><p>Set the tip-splitting rule and manage the weekly card-tip process.</p></article>
+  <article class="feature"><h3>For team members</h3><p>Check your own payout, working hours and the explanation of your tip calculation.</p></article>
+  <article class="feature"><h3>For a fairer conversation</h3><p>Give staff clearer information so they can understand what their payout shows and raise a question if something looks wrong.</p></article>
+ </div>
+</div></section>
+
+<section class="section how"><div class="wrap">
+ <h2>Tip transparency, with personal privacy</h2>
+ <p class="section-intro">Staff can check their own payout information without being shown another team member's personal figures. The staff demo shows how this personal view works.</p>
+ <div class="steps">
+  <article class="step"><span class="num">FOR OWNERS</span><h3>Manage the split</h3><p>Set the tip-splitting rule in the owner dashboard.</p></article>
+  <article class="step"><span class="num">FOR STAFF</span><h3>Check your own payout</h3><p>Open the staff view to see your own payout and the information used to explain it.</p></article>
+  <article class="step"><span class="num">EACH MONDAY</span><h3>Receive a payout text</h3><p>Staff receive a text with their own payout each Monday.</p></article>
+ </div>
+ <p class="muted source">The staff view is an assignment prototype using the supplied pilot data. It is not a live payroll or bank-payment service.</p>
+</div></section>
+
+<section class="cta"><div class="wrap"><div class="cta-panel">
+ <div><h2>Want to see if Sciar Tips fits your restaurant?</h2><p>Ask us about signing up: <a href="mailto:hello@sciar.example" style="color:#fff;text-decoration:underline">hello@sciar.example</a></p></div>
+ <a class="btn" href="mailto:hello@sciar.example?subject=Sciar%20Tips%20sign-up">Email Sciar Tips</a>
+</div></div></section>
+</main>
+<footer><div class="wrap">
+ <div>Sciar Tips · Product information for restaurant owners.</div>
+ <div class="source">Prototype for the Sciar Tips teaching case. Product details are grounded in the supplied README.md and the staff-view alpha. No customer numbers, testimonials, ratings, savings claims or legal-compliance claims are made.</div>
+ <div class="source">Contact: <a href="mailto:hello@sciar.example">hello@sciar.example</a></div>
+</div></footer>
+</body></html>
